@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="Andez & Rahma" />
-    <meta name="author" content="Andez & Rahma" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cde9ccea0b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <img src="media/Andez Apriansyah1.jpg" alt="thumbnail" class="song-img">
+            <h1>Al Hijrotu</h1>
+            <p>Sabyan Gambus</p>
 
-    <title>Andez & Rahma</title>
+            <audio id="song">
+                <source src="media/AL HIJROTU ( SHOLAWAT ) - NISSA SABYAN_1lhOAXC6ZGU.mp3" type="audio/mpeg">
+            </audio>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="style/cover.css" rel="stylesheet" />
-  </head>
+            <input type="range" value="0" id="progress">
 
-  <body>
-    <div class="background">
-      <div class="content" data-aos="zoom-in" data-aos-duration="500">
-        <h2 data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
-          UNDANGAN PERNIKAHAN
-        </h2>
-        <h5
-          data-aos="zoom-in-left"
-          data-aos-duration="500"
-          data-aos-delay="400"
-        >
-          Andez
-        </h5>
-        <h6 data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">
-          &
-        </h6>
-        <h5
-          data-aos="zoom-in-right"
-          data-aos-duration="500"
-          data-aos-delay="800"
-        >
-          Rahma
-        </h5>
-        <a
-          href="/main.html"
-          class="btn btn-custom"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-          data-aos-duration="1000"
-          data-aos-delay="1400"
-          >BUKA UNDANGAN</a
-        >
-      </div>
+            <div class="controls">
+                <div class=""><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playPause()" class=""><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                <div class=""><i class="fa-solid fa-forward"></i></div>
+            </div>
+        </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="/vendor/jquery/jquery.slim.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
-      AOS.init();
+
+        let progress = document.getElementById("progress");
+        let song = document.getElementById("song");
+        let ctrlIcon = document.getElementById("ctrlIcon");
+
+        song.onloadedmetadata = function () {
+            progress.max = song.duration;
+            progress.value = song.currentTime;
+
+        }
+
+        function playPause() {
+            if (ctrlIcon.classList.contains("fa-pause")) {
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+            } else {
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+            }
+        }
+
+        if (song.play()) {
+            setInterval(()=>{
+                progress.value = song.currentTime;
+            },500);
+        }
+
+        progress.onchange = function(){
+            song.play();
+            song.currentTime = progress.value;
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+        }
+
     </script>
-  </body>
+</body>
 </html>
