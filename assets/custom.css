@@ -1,4 +1,4 @@
-.bg-primary{
+.bg-primary, .text-bg-primary{
     background-color: #295B95 !important;
 }
 
@@ -70,11 +70,6 @@ body {
 .img .img-avatar{
     width: 100%;
     border-radius: 50%;
-}
-
-.banner .carousel-item img{
-    border-radius: 3%;
-    height: 250px;
 }
 
 .carousel-indicators{
