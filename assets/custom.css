@@ -1,3 +1,12 @@
+.bg-primary{
+    background-color: #295B95 !important;
+}
+
+.btn-primary{
+    background-color: #295B95;
+    color: #DBFF00;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
   }
@@ -10,7 +19,8 @@ body {
     padding: 10px;
     margin-top: 55px;
     max-height: 50px;
-    background-color: #ddd;
+    background-color: #DBFF00;
+    color: #295B95;
 }
 
 .wrapper-item{
@@ -53,7 +63,7 @@ body {
 .img{
     width: 50px;
     height: 50px;
-    background-color: aquamarine;
+    background-color: #295B95;
     border-radius: 50%;
 }
 
@@ -74,14 +84,15 @@ body {
 
 .carousel-indicators [data-bs-target]{
     background-color: transparent;
-    border: 1px solid yellow;
+    border: 1px solid #DBFF00;
     width: 10px;
     height: 10px;
     border-radius: 50%;
 }
 
 .carousel-indicators .active {
-    background-color:yellow;
+    background-color:#DBFF00;
+    border: 2px solid #295B95;
     width: 15px;
     height: 15px;
 }
@@ -103,7 +114,7 @@ body {
 }
 
 .img-audio{
-    background-color: #ddd;
+    background-color: #DBFF00;
     width: 100%;
     border-radius: 10%;
 }
@@ -112,18 +123,18 @@ body {
     -webkit-appearance: none;
     width: 100%;
     height: 6px;
-    background: #f53192;
+    background: #295B95;
     border-radius: 4px;
     cursor: pointer;
 }
 
 #progress::-webkit-slider-thumb{
     -webkit-appearance: none;
-    background: #f53192;
+    background: #295B95;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 4px solid #fff;
+    border: 4px solid #DBFF00;
     box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
 }
 
@@ -139,7 +150,7 @@ body {
     align-items: center;
     width: 30px;
     height: 30px;
-    color: #f53192;
+    color: #295B95;
     cursor: pointer;
 }
 
@@ -149,7 +160,10 @@ body {
 
 .fixed-bottom{
     height: 80px;
-    background-color: #f53192;
+    background-color: #295B95;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #DBFF00;
 }
 
 .row{
@@ -158,4 +172,19 @@ body {
 
 .col{
     text-align: center;
+}
+
+.loc {
+    font-size: 8pt;
+    font-weight: lighter;
+}
+
+.text-head, .btn, .album, .wrapper {
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.text-sub, .album-sub {
+    font-size: 10pt;
+    font-weight: lighter;
 }

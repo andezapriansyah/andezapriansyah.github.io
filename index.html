@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/custom.css">
   </head>
-  <body oncontextmenu="return false">
+  <body>
     
-    <nav class="navbar navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-dark bg-primary fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#">IRPAN</a>
           <a href="http://" class="btn btn-success get-app">Get APP</a>
@@ -72,7 +72,7 @@
       <div class="location mt-3">
         <div class="container">
             <i class="fa-solid fa-map-pin"></i>
-            <div class="text-location"><div class="loc"></div> - Dzuhur 12.01</div>
+            <div class="text-location"><div class="loc"></div></div>
         </div>
       </div>
 
@@ -127,7 +127,7 @@
           </div>
           <div class="text-audio">
             <div class="album">Qosidah</div>
-            <small class="album">Bahebbak BW Version</small>
+            <small class="album-sub">Bahebbak BW Version</small>
             <audio id="song">
               <source id="audio1" src="assets/audio/qosidah/Bahebbak BW Version.mp3" type="audio/mpeg">
             </audio>
@@ -218,7 +218,7 @@
         fetch(geoApiUrl)
         .then(res => res.json())
         .then(data => {
-            loc.textContent = data.locality + ", " + data.city
+            loc.textContent = data.locality + ", " + data.city + " - Dzuhur 12.01"
         })
     }
 
