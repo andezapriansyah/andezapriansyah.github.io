@@ -1,33 +1,15 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-    <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.all.min.js"></script>
-
-    <script type="text/Javascript">
-      function generateHash(code) {   
-        var md = forge.md.sha1.create();  
-        md.start();  
-        md.update(code, "utf8");  
-        var hashText = md.digest().toHex();  
-        return hashText;
-      } 
-    </script>
-    </head>
-
-    <body>
-
-        <a href="" id="resetPwd">Reset your password</a>
-
-  <script th:inline="javascript">
-
-     /*<![CDATA[*/
-
-  var encCode = generateHash(/*[[${code}]]*/ 'code');
-  document.getElementById("resetPwd").href='http://login.example.com/login/reset_password?code=' + encCode;
-
-            /*]]>*/
-
- </script>  
-
-    </body>
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Get User Location in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 class="status"></h1>
+    <button class="find-state">Detect your location</button>
+    <script src="script.js"></script>
+  </body>
 </html>

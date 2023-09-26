@@ -6,7 +6,9 @@
     <title>IRPAN - Ikatan Remaja Pancoran</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/cde9ccea0b.js" crossorigin="anonymous"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/custom.css">
   </head>
   <body oncontextmenu="return false">
@@ -70,7 +72,7 @@
       <div class="location mt-3">
         <div class="container">
             <i class="fa-solid fa-map-pin"></i>
-            <div class="text-location">Pancoran, Jakarta Selatan - Dzuhur 12.01</div>
+            <div class="text-location"><div class="loc"></div> - Dzuhur 12.01</div>
         </div>
       </div>
 
@@ -200,6 +202,31 @@
           ctrlIcon.classList.add("fa-pause");
           ctrlIcon.classList.remove("fa-play");
       }
+
+
+      //////////////////////////// LOCATION
+
+      const loc = document.querySelector('.loc');
+
+    const success = (position) => {
+        console.log(position)
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        
+        const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
+
+        fetch(geoApiUrl)
+        .then(res => res.json())
+        .then(data => {
+            loc.textContent = data.locality + ", " + data.city
+        })
+    }
+
+    const error = () => {
+        status.textContent = 'Unable';
+    }
+
+    navigator.geolocation.getCurrentPosition(success, error);
 
   </script>
   </body>
