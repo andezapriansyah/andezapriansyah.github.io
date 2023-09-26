@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.all.min.js"></script>
+
+    <script type="text/Javascript">
+      function generateHash(code) {   
+        var md = forge.md.sha1.create();  
+        md.start();  
+        md.update(code, "utf8");  
+        var hashText = md.digest().toHex();  
+        return hashText;
+      } 
+    </script>
+    </head>
+
+    <body>
+
+        <a href="" id="resetPwd">Reset your password</a>
+
+  <script th:inline="javascript">
+
+     /*<![CDATA[*/
+
+  var encCode = generateHash(/*[[${code}]]*/ 'code');
+  document.getElementById("resetPwd").href='http://login.example.com/login/reset_password?code=' + encCode;
+
+            /*]]>*/
+
+ </script>  
+
+    </body>
+</html>
