@@ -72,6 +72,7 @@
         <div class="container">
             <i class="fa-solid fa-map-pin"></i>
             <div class="text-location"><div class="loc"></div></div>
+            <div class="text-location"><div class=".locCity"></div></div>
         </div>
       </div>
 
@@ -124,9 +125,9 @@
           </div>
           <div class="text-audio">
             <div class="album">Qosidah</div>
-            <small class="album-sub">Bahebbak BW Version</small>
+            <small class="album-sub">Qosidah ZM - Al Hijrotu</small>
             <audio id="song">
-              <source id="audio1" src="assets/audio/qosidah/Bahebbak BW Version.mp3" type="audio/mpeg">
+              <source id="audio1" src="assets/audio/qosidah/Qosidah ZM - Al Hijrotu.mp3" type="audio/mpeg">
             </audio>
 
             <input type="range" value="0" id="progress">
@@ -204,9 +205,8 @@
       //////////////////////////// LOCATION
 
       const loc = document.querySelector('.loc');
-
+let pray;
     const success = (position) => {
-        console.log(position)
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         
@@ -215,7 +215,39 @@
         fetch(geoApiUrl)
         .then(res => res.json())
         .then(data => {
-            loc.textContent = data.locality + ", " + data.city + " - Dzuhur 12.01"
+          // jadwal sholat
+          const city = data.city.toLowerCase();
+          const d = new Date();
+          let year = d.getFullYear();
+          let month = d.getMonth() + 1;
+          let day = d.getDate() - 1;
+          let hour = d.getHours();
+          let minutes = d.getMinutes();
+          
+          const prayApiUrl = `https://cdn.statically.io/gh/lakuapik/jadwalsholatorg/master/adzan/${city}/${year}/${month}.json`
+
+        fetch(prayApiUrl)
+        .then(res => res.json())
+        .then(dataa => {
+          console.log(hour);
+
+            if (hour >= 19 || hour <= 5) {
+              loc.textContent = data.locality + ", " + data.city + " - Shubuh " + dataa[day].shubuh
+            } else if (hour >= 5 || hour <= 7) {
+              loc.textContent = data.locality + ", " + data.city + " - Terbit " + dataa[day].terbit
+            } else if (hour >= 7 || hour <= 13) {
+              loc.textContent = data.locality + ", " + data.city + " - Dzuhur " + dataa[day].dzuhur
+            } else if (hour >= 13 || hour <= 16) {
+              loc.textContent = data.locality + ", " + data.city + " - Ashar " + dataa[day].ashr
+            } else if (hour >= 16 || hour <= 18) {
+              loc.textContent = data.locality + ", " + data.city + " - Maghrib " + dataa[day].magrib
+            } else if (hour >= 18 || hour <= 19) {
+              loc.textContent = data.locality + ", " + data.city + " - Isya " + dataa[day].isya
+            }
+        })
+
+          // jadwal sholat
+            // loc.textContent = data.locality + ", " + data.city + " - Dzuhur 12.01"
         })
     }
 
