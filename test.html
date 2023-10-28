@@ -2,14 +2,40 @@
 <!-- Created By CodingNepal - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Get User Location in JavaScript | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <h1 class="status"></h1>
-    <button class="find-state">Detect your location</button>
-    <script src="script.js"></script>
+    <p id="demo"></p>
+
+    <script>
+      // const dbParam = JSON.stringify({table:"customers",limit:20});
+      // const xmlhttp = new XMLHttpRequest();
+      // xmlhttp.onload = function() {
+      //   const myObj = JSON.parse(this.responseText);
+      //   let text = "<table border='1'>"
+      //   for (let x in myObj) {
+      //     text += "<tr><td>" + myObj[x].name + "</td></tr>";
+      //   }
+      //   text += "</table>"
+      //   document.getElementById("demo").innerHTML = text;
+      // }
+      // xmlhttp.open("POST", "json_demo_html_table.php");
+      // xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      // xmlhttp.send("x=" + dbParam);
+      fetch('api.json')
+        .then((response) => response.json())
+        .then(
+          (json) =>
+            (document.getElementById('demo').innerHTML = JSON.stringify(json))
+        );
+
+      //   $.getJSON('api.json', function (json) {
+      //     console.log(json); // this will
+      //     document.getElementById('demo').innerHTML = json;
+      //   });
+    </script>
   </body>
 </html>
