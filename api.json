@@ -1,0 +1,61 @@
+{
+  "teaching": [
+    {
+      "id": "zmbw-20230801-001",
+      "title": "20230801_001 ZM Malam Kamis Pertama Al Busyro",
+      "album": "teaching",
+      "artist": "Al Ustadz Al Habib Alwi Bin Sayyidil Walid Al Habib Abdurrohman Assegaf",
+      "genre": "Zaadul Muslim",
+      "source": "http://192.168.1.5/api-irpan/assets/audio/qosidah/SABYAN%20%20ZAADUL%20MUSLIM%202.mp3",
+      "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
+      "trackNumber": "1",
+      "duration": "228"
+    },
+    {
+      "id": "zmbw-20230801-002",
+      "title": "20230801_002 BW Minggu Pagi Pertama Al Busyro",
+      "album": "teaching",
+      "artist": "Al Ustadz Al Habib Alwi Bin Sayyidil Walid Al Habib Abdurrohman Assegaf",
+      "genre": "Zaadul Muslim",
+      "source": "http://192.168.1.5/api-irpan/assets/audio/qosidah/SABYAN%20%20ZAADUL%20MUSLIM%202.mp3",
+      "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
+      "trackNumber": "2",
+      "duration": "228"
+    },
+    {
+      "id": "zmbw-20230801-003",
+      "title": "20230801_003 ZM Malam Jum'at Pertama Al Busyro",
+      "album": "teaching",
+      "artist": "Al Ustadz Al Habib Alwi Bin Sayyidil Walid Al Habib Abdurrohman Assegaf",
+      "genre": "Zaadul Muslim",
+      "source": "http://192.168.1.5/api-irpan/assets/audio/teaching/20230801_003_ZM_Malam_Jumat_Pertama_Al_Busyro.mp3",
+      "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
+      "trackNumber": "3",
+      "duration": "228"
+    },
+    {
+      "id": "zmbw-20230803-001",
+      "title": "20230803_001 BW Minggu Pagi Pertama Al Busyro",
+      "album": "teaching",
+      "artist": "Al Ustadz Al Habib Alwi Bin Sayyidil Walid Al Habib Abdurrohman Assegaf",
+      "genre": "Zaadul Muslim",
+      "source": "http://192.168.1.5/api-irpan/assets/audio/qosidah/SABYAN%20%20ZAADUL%20MUSLIM%202.mp3",
+      "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
+      "trackNumber": "1",
+      "duration": "228"
+    }
+  ],
+  "qosidah": [
+    {
+      "id": "qsdh-20230801-001",
+      "title": "ZM Qosidah - Syair Bunga Melati",
+      "album": "Qosidah",
+      "artist": "Iwan",
+      "genre": "Zaadul Muslim",
+      "source": "http://192.168.1.5/api-irpan/assets/audio/qosidah/SABYAN%20%20ZAADUL%20MUSLIM%202.mp3",
+      "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
+      "trackNumber": "1",
+      "duration": "228"
+    }
+  ]
+}
