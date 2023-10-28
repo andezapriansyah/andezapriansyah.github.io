@@ -6,7 +6,7 @@
       "album": "teaching",
       "artist": "Al Ustadz Al Habib Alwi Bin Sayyidil Walid Al Habib Abdurrohman Assegaf",
       "genre": "Zaadul Muslim",
-      "source": "http://192.168.1.5/api-irpan/assets/audio/qosidah/SABYAN%20%20ZAADUL%20MUSLIM%202.mp3",
+      "source": "http://127.0.0.1:5500/assets/audio/qosidah/Bahebbak%20BW%20Version.mp3",
       "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
       "trackNumber": "1",
       "duration": "228"
@@ -17,7 +17,7 @@
       "album": "teaching",
       "artist": "Al Ustadz Al Habib Alwi Bin Sayyidil Walid Al Habib Abdurrohman Assegaf",
       "genre": "Zaadul Muslim",
-      "source": "http://192.168.1.5/api-irpan/assets/audio/qosidah/SABYAN%20%20ZAADUL%20MUSLIM%202.mp3",
+      "source": "http://127.0.0.1:5500/assets/audio/qosidah/Bahebbak%20BW%20Version.mp3",
       "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
       "trackNumber": "2",
       "duration": "228"
@@ -28,7 +28,7 @@
       "album": "teaching",
       "artist": "Al Ustadz Al Habib Alwi Bin Sayyidil Walid Al Habib Abdurrohman Assegaf",
       "genre": "Zaadul Muslim",
-      "source": "http://192.168.1.5/api-irpan/assets/audio/teaching/20230801_003_ZM_Malam_Jumat_Pertama_Al_Busyro.mp3",
+      "source": "http://127.0.0.1:5500/assets/audio/qosidah/Bahebbak%20BW%20Version.mp3",
       "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
       "trackNumber": "3",
       "duration": "228"
@@ -39,7 +39,7 @@
       "album": "teaching",
       "artist": "Al Ustadz Al Habib Alwi Bin Sayyidil Walid Al Habib Abdurrohman Assegaf",
       "genre": "Zaadul Muslim",
-      "source": "http://192.168.1.5/api-irpan/assets/audio/qosidah/SABYAN%20%20ZAADUL%20MUSLIM%202.mp3",
+      "source": "http://127.0.0.1:5500/assets/audio/qosidah/Bahebbak%20BW%20Version.mp3",
       "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
       "trackNumber": "1",
       "duration": "228"
@@ -52,7 +52,7 @@
       "album": "Qosidah",
       "artist": "Iwan",
       "genre": "Zaadul Muslim",
-      "source": "http://192.168.1.5/api-irpan/assets/audio/qosidah/SABYAN%20%20ZAADUL%20MUSLIM%202.mp3",
+      "source": "http://127.0.0.1:5500/assets/audio/qosidah/Bahebbak%20BW%20Version.mp3",
       "image": "http://192.168.1.5/api-irpan/assets/image/thumbnail_audio.jpg",
       "trackNumber": "1",
       "duration": "228"
