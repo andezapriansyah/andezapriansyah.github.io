@@ -4,46 +4,179 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="assets/kpps.css" />
+    <script
+      src="https://kit.fontawesome.com/cde9ccea0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="assets/kpps.css" />
   </head>
   <body>
-    <h1 class="text-center">DPT</h1>
+    <!-- DPT -->
+    <h1 class="text-center title">DPT</h1>
     <div class="container">
       <div class="row">
         <div class="col text-center">
-          Laki-Laki
-          <h1 id="value">0</h1>
+          <h5>Laki-Laki</h5>
+          <h1 id="valueDptL">0</h1>
           <div class="row">
             <div class="col">
-              <input type="button" value="+" onclick="add()" />
-              <input type="button" value="-" onclick="del()" />
-              <input type="button" value="c" onclick="clr()" />
+              <button type="button" class="btn btn-success" onclick="addDptL()">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button type="button" class="btn btn-danger" onclick="delDptL()">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="clrDptL()"
+              >
+                <i class="fa-solid fa-c"></i>
+              </button>
             </div>
           </div>
         </div>
         <div class="col text-center">
-          Perempuan
-          <h1 id="value">0</h1>
+          <h5>Perempuan</h5>
+          <h1 id="valueDptP">0</h1>
           <div class="row">
             <div class="col">
-              <input type="button" value="+" onclick="add()" />
-              <input type="button" value="-" onclick="del()" />
-              <input type="button" value="c" onclick="clr()" />
+              <button type="button" class="btn btn-success" onclick="addDptP()">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button type="button" class="btn btn-danger" onclick="delDptP()">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="clrDptP()"
+              >
+                <i class="fa-solid fa-c"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <hr />
+    <!-- DPTb -->
+    <h1 class="text-center title">DPTb</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h5>Laki-Laki</h5>
+          <h1 id="valueDptL">0</h1>
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-success" onclick="addDptL()">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button type="button" class="btn btn-danger" onclick="delDptL()">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="clrDptL()"
+              >
+                <i class="fa-solid fa-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center">
+          <h5>Perempuan</h5>
+          <h1 id="valueDptP">0</h1>
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-success" onclick="addDptP()">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button type="button" class="btn btn-danger" onclick="delDptP()">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="clrDptP()"
+              >
+                <i class="fa-solid fa-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <!-- DPK -->
+    <h1 class="text-center title">DPK</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h5>Laki-Laki</h5>
+          <h1 id="valueDptL">0</h1>
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-success" onclick="addDptL()">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button type="button" class="btn btn-danger" onclick="delDptL()">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="clrDptL()"
+              >
+                <i class="fa-solid fa-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center">
+          <h5>Perempuan</h5>
+          <h1 id="valueDptP">0</h1>
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-success" onclick="addDptP()">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button type="button" class="btn btn-danger" onclick="delDptP()">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="clrDptP()"
+              >
+                <i class="fa-solid fa-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/kpps.js"></script>
   </body>
 </html>

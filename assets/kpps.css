@@ -1,3 +1,17 @@
 body {
-  padding: 55px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  margin-top: 20px;
+}
+
+h5 {
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 50pt;
+  font-weight: bolder;
 }
